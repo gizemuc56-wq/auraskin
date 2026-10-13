@@ -1,0 +1,188 @@
+<!--
+  Proje: Cilt Bakımı Tek Sayfalık Web Sitesi
+  Dosya: index.html
+  Amaç: Web tasarım ödevi için semantik ve modern HTML yapısı
+-->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Skin - Doğal ve Modern Cilt Bakımı</title>
+    <!-- CSS Dosyası Bağlantısı -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts entegrasyonu (Estetik bir tipografi için Playfair Display ve Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. ÜST MENÜ (Header & Navigation) -->
+    <header class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo">Aura<span>Skin</span></a>
+            <nav class="nav-menu">
+                <a href="#hero">Ana Sayfa</a>
+                <a href="#products">Ürünlerimiz</a>
+                <a href="#routine">Günlük Rutin</a>
+                <a href="#about">Hakkımızda</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 2. KARŞILAMA ALANI (Hero Section) -->
+    <section id="hero" class="hero-section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">Doğallığın Estetik Dokunuşu</span>
+                <h1 class="hero-title">Cildinize Hak Ettiği Değeri Verin</h1>
+                <p class="hero-text">Doğal içerikler ve bilimsel formüllerle geliştirilmiş minimalist cilt bakım ürünlerimizle tanışın. Işıltınızı yeniden keşfedin.</p>
+                <a href="#products" class="btn-primary">Keşfetmeye Başla</a>
+            </div>
+            <div class="hero-image-placeholder">
+                <!-- Estetik placeholder görsel veya CSS illüstrasyonu için alan -->
+                <div class="aesthetic-circle"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ÜRÜN KARTLARI BÖLÜMÜ (Products Section) -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Öne Çıkan Ürünlerimiz</h2>
+            <p class="section-subtitle">Sizler için özel olarak formüle edilmiş temel bakım serimiz</p>
+            
+            <div class="products-grid">
+                <!-- Kart 1: Temizleyici -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <span class="product-tag">Yumuşak Formül</span>
+                        <div class="product-visual product-cleanser"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Hassas Arındırıcı Jel</h3>
+                        <p class="product-desc">Cildinizi kurutmadan derinlemesine temizler, gözenekleri kirden ve makyaj kalıntılarından arındırır.</p>
+                        <span class="product-price">249,00 TL</span>
+                    </div>
+                </div>
+
+                <!-- Kart 2: Nemlendirici -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <span class="product-tag">72 Saat Nem</span>
+                        <div class="product-visual product-moisturizer"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Yoğun Nemlendirici Krem</h3>
+                        <p class="product-desc">Seramid ve hiyalüronik asit içeriği ile cildin bariyerini güçlendirir ve derinlemesine nemlendirir.</p>
+                        <span class="product-price">319,00 TL</span>
+                    </div>
+                </div>
+
+                <!-- Kart 3: Güneş Kremi -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <span class="product-tag">SPF 50+</span>
+                        <div class="product-visual product-sunscreen"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Hafif Dokulu Güneş Kremi</h3>
+                        <p class="product-desc">Yüksek UVA/UVB koruması sağlarken ciltte beyazlık bırakmaz, mat ve doğal bir bitiş sunar.</p>
+                        <span class="product-price">289,00 TL</span>
+                    </div>
+                </div>
+
+                <!-- Kart 4: Serum -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <span class="product-tag">Işıltı Verici</span>
+                        <div class="product-visual product-serum"></div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Aydınlatıcı C Vitamini Serumu</h3>
+                        <p class="product-desc">Antioksidan etkisiyle cilt tonunu eşitler, leke görünümünü azaltır ve doğal bir ışıltı kazandırır.</p>
+                        <span class="product-price">389,00 TL</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. GÜNLÜK BAKIM RUTİNİ BÖLÜMÜ (Routine Section) -->
+    <section id="routine" class="routine-section">
+        <div class="container">
+            <div class="routine-wrapper">
+                <div class="routine-info">
+                    <h2 class="section-title left-align">3 Adımlı Günlük Rutin</h2>
+                    <p class="section-subtitle left-align">Karmaşık rutinleri geride bırakın. Sağlıklı bir cilt için bu üç temel adımı her gün düzenli uygulayın.</p>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-num">01</div>
+                            <div class="timeline-content">
+                                <h4>Temizleme (Sabah & Akşam)</h4>
+                                <p>Cildinizi ılık su ve hassas temizleyicimiz ile yıkayarak sonraki adımlara hazırlayın.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-num">02</div>
+                            <div class="timeline-content">
+                                <h4>Nemlendirme & Onarım</h4>
+                                <p>Nemlendirici krem veya serum uygulayarak cilt bariyerinizi besleyin ve elastikiyetini koruyun.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-num">03</div>
+                            <div class="timeline-content">
+                                <h4>Güneş Koruması (Sadece Gündüz)</h4>
+                                <p>Evden çıkmasanız dahi UV ışınlarının yaşlandırıcı etkilerinden korunmak için güneş kremini ihmal etmeyin.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="routine-image-box">
+                    <div class="routine-visual-aesthetic"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. HAKKIMIZDA BÖLÜMÜ (About Section) -->
+    <section id="about" class="about-section">
+        <div class="container about-container">
+            <div class="about-content">
+                <h2 class="section-title left-align">Hikayemiz & Felsefemiz</h2>
+                <p>Aura Skin olarak, temiz içeriğin ve dürüst kozmetiğin gücüne inanıyoruz. Laboratuvar ortamında geliştirilen formüllerimizi doğadan aldığımız en saf özlerle harmanlıyoruz. Amacımız, cildinizi yormadan en doğal ve sağlıklı görünümüne ulaştırmaktır.</p>
+                <p>Ürünlerimizin hiçbiri paraben içermez, hayvanlar üzerinde test edilmemiştir (cruelty-free) ve vegan dostudur. Sürdürülebilir paketleme çözümlerimizle doğaya duyarlı adımlar atıyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ALT BİLGİ BÖLÜMÜ (Footer) -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">Aura<span>Skin</span></a>
+                <p>Doğallık ve bilimin estetik buluşması.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Hızlı Erişim</h4>
+                <a href="#hero">Ana Sayfa</a>
+                <a href="#products">Ürünler</a>
+                <a href="#routine">Rutin</a>
+                <a href="#about">Hakkımızda</a>
+            </div>
+            <div class="footer-contact">
+                <h4>İletişim</h4>
+                <p>E-posta: info@auraskin.com</p>
+                <p>Adres: Beşiktaş, İstanbul</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Aura Skin. Tüm Hakları Saklıdır. | Web Tasarım Ödevi</p>
+        </div>
+    </footer>
+
+</body>
+</html>

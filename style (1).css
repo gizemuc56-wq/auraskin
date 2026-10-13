@@ -1,0 +1,474 @@
+/*
+  Proje: Cilt Bakımı Tek Sayfalık Web Sitesi
+  Dosya: style.css
+  Tema Renkleri:
+    - Kırık Beyaz: #FAF9F6 (Arka Plan)
+    - Pudra Pembesi: #F2D2D9 (Vurgu / Yumuşak Butonlar)
+    - Bej: #F5F0EA (Alternatif Arka Planlar / Kartlar)
+    - Koyu Kahverengi: #3D2E2A (Yazı ve Başlıklar)
+*/
+
+/* --- Temel Sınıf ve Reset Ayarları --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Yumuşak kaydırma efekti */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #FAF9F6;
+    color: #3D2E2A;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* --- Başlık ve Alt Başlık Stilleri --- */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.section-title.left-align {
+    text-align: left;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-style: italic;
+    color: #6e544e;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.section-subtitle.left-align {
+    text-align: left;
+}
+
+/* --- Buton Stili --- */
+.btn-primary {
+    display: inline-block;
+    background-color: #3D2E2A;
+    color: #FAF9F6;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border: 1px solid #3D2E2A;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #3D2E2A;
+}
+
+/* --- 1. ÜST MENÜ (Navbar) --- */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: rgba(250, 249, 246, 0.95);
+    box-shadow: 0 2px 10px rgba(61, 46, 42, 0.05);
+    z-index: 1000;
+    border-bottom: 1px solid #F5F0EA;
+}
+
+.navbar-container {
+    padding: 20px 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #E2B2B9; /* Pudra pembesinin biraz daha belirgin tonu */
+}
+
+.nav-menu a {
+    margin-left: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.nav-menu a:hover {
+    color: #E2B2B9;
+}
+
+/* --- 2. KARŞILAMA ALANI (Hero Section) --- */
+.hero-section {
+    background-color: #F5F0EA;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-subtitle {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    color: #a38c83;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    color: #6e544e;
+    margin-bottom: 35px;
+}
+
+.hero-image-placeholder {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    position: relative;
+}
+
+/* CSS ile çizilen sanatsal ve minimalist bir görsel simülasyonu */
+.aesthetic-circle {
+    width: 320px;
+    height: 320px;
+    background-color: #F2D2D9;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: -20px 20px 0px #3D2E2A;
+}
+
+.aesthetic-circle::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border: 2px dashed #FAF9F6;
+    border-radius: 50%;
+}
+
+/* --- 3. ÜRÜN KARTLARI BÖLÜMÜ --- */
+.products-section {
+    background-color: #FAF9F6;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background-color: #F5F0EA;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(61, 46, 42, 0.08);
+}
+
+.product-image-box {
+    position: relative;
+    background-color: #FAF9F6;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.product-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #F2D2D9;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Ürünlerin Görsel Temsili (Minimalist CSS Tasarımı) */
+.product-visual {
+    width: 80px;
+    height: 140px;
+    border-radius: 8px 8px 4px 4px;
+    position: relative;
+    border: 3px solid #3D2E2A;
+}
+
+.product-cleanser { background-color: #F2D2D9; }
+.product-moisturizer { background-color: #FAF9F6; }
+.product-sunscreen { background-color: #eddcd2; }
+.product-serum {
+    width: 60px;
+    height: 110px;
+    border-radius: 50% 50% 8px 8px;
+    background-color: #f2e9e4;
+}
+
+.product-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.product-desc {
+    font-size: 0.9rem;
+    color: #6e544e;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3D2E2A;
+}
+
+/* --- 4. GÜNLÜK BAKIM RUTİNİ BÖLÜMÜ --- */
+.routine-section {
+    background-color: #F5F0EA;
+}
+
+.routine-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.routine-info {
+    flex: 1.2;
+}
+
+.routine-image-box {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+.routine-visual-aesthetic {
+    width: 100%;
+    max-width: 320px;
+    height: 400px;
+    background-color: #FAF9F6;
+    border-radius: 150px 150px 0 0;
+    border: 3px solid #3D2E2A;
+    position: relative;
+}
+
+.routine-visual-aesthetic::before {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: -20px;
+    width: 80px;
+    height: 80px;
+    background-color: #F2D2D9;
+    border-radius: 50%;
+}
+
+/* Zaman Tüneli (Timeline) */
+.timeline {
+    margin-top: 30px;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.timeline-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #E2B2B9;
+    border-bottom: 2px solid #E2B2B9;
+    height: fit-content;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: #6e544e;
+}
+
+/* --- 5. HAKKIMIZDA BÖLÜMÜ --- */
+.about-section {
+    background-color: #F2D2D9;
+    background-image: radial-gradient(circle at 20% 30%, #FAF9F6 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+}
+
+.about-content {
+    max-width: 800px;
+    text-align: center;
+    background-color: rgba(250, 249, 246, 0.9);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.about-content p {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+    color: #3D2E2A;
+}
+
+/* --- 6. ALT BİLGİ BÖLÜMÜ (Footer) --- */
+.main-footer {
+    background-color: #3D2E2A;
+    color: #FAF9F6;
+    padding: 60px 0 20px 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px !important;
+    border-bottom: 1px solid rgba(250, 249, 246, 0.1);
+}
+
+.footer-brand .logo {
+    color: #FAF9F6;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-links h4, .footer-contact h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.footer-links a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    color: #F2D2D9;
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* --- MOBİL UYUMLULUK (Responsive Design) --- */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .routine-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav-menu a {
+        margin: 0 10px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
